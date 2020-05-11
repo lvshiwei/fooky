@@ -1,14 +1,14 @@
 /**
-* @overview 验证工具
+* @overview react hook for form validation
 * @author shiwei.lv
 */
 
 import React, { useState } from 'react';
 import { reach } from 'yup';
-import { isNotEmptyArray } from '../../../../utils/asserts';
+import { isNotEmptyArray } from './lib/asserts';
 /**
- * 验证工具
- * @param {Yup} schema 验证规则
+ * validation hook.
+ * @param {Yup Schema} schema yup schema
  */
 export default function useValidate(schema) {
   const [errors, setErrors] = useState([]);

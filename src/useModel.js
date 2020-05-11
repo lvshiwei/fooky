@@ -1,5 +1,5 @@
 /**
-* @overview 表单数据绑定模型
+* @overview react form hook for model binding
 * @author shiwei.lv
 */
 
