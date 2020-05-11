@@ -1,0 +1,26 @@
+{
+  "name": "fooky",
+  "version": "1.0.0",
+  "description": "React hooks library for form model binding and validation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvshiwei/fooky.git"
+  },
+  "keywords": [
+    "react",
+    "form",
+    "hook",
+    "validation",
+    "mvvm"
+  ],
+  "author": "lvshiwei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lvshiwei/fooky/issues"
+  },
+  "homepage": "https://github.com/lvshiwei/fooky#readme"
+}
