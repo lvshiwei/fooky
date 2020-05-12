@@ -11,41 +11,41 @@ $ npm i fooky
 # How to use
 
 ```jsx
-  import React from 'react';
-  import classnames from 'classnames';
-  import { object, string, number } from 'yup';
+import React from 'react';
+import classnames from 'classnames';
+import { object, string, number } from 'yup';
 
-  export default function() {
-    const [model, setModel] = useModel({ age: 18 })
-    const [validate, errors, hasError, getErors] = useValidation(object({
-      name: string().max(5, "name is too long."),
-      age: number().min(18, "too young"),
-    }));
-    const renderClassName = (name) => classnames({
-      error: hasError(name)
-    });
+export default function() {
+  const [model, setModel] = useModel({ age: 18 })
+  const [validate, errors, hasError, getErors] = useValidation(object({
+    name: string().max(5, "name is too long."),
+    age: number().min(18, "too young"),
+  }));
+  const renderClassName = (name) => classnames({
+    error: hasError(name)
+  });
 
-    const handleSubmit = () => {
-      validate(model)
-        .then(()=> alert('amazing!'))
-        .catch(() => {
-          console.error(errors)
-        });
-    }
-
-    return <form>
-        <input placeholder="please type name" value={model.name} onChange={()=> setModel('name')} onBlur={() => validate('name')}></input>
-        { 
-          hasError('name') && <div>{ getErrors('name') }</div> 
-        }
-        <input placeholder="how old?" value={model.age} onChange={()=> setModel('age')} onBlur={() => validate('age')}></input>
-        { 
-          hasError('age') && <div>{ getErrors('age') }</div>
-        }
-
-        <button type="submit" onClick={handleSubmit}>
-    </form>
+  const handleSubmit = () => {
+    validate(model)
+      .then(()=> alert('amazing!'))
+      .catch(() => {
+        console.error(errors)
+      });
   }
+
+  return <form>
+      <input placeholder="please type name" value={model.name} onChange={()=> setModel('name')} onBlur={() => validate('name')}></input>
+      { 
+        hasError('name') && <div>{ getErrors('name') }</div> 
+      }
+      <input placeholder="how old?" value={model.age} onChange={()=> setModel('age')} onBlur={() => validate('age')}></input>
+      { 
+        hasError('age') && <div>{ getErrors('age') }</div>
+      }
+
+      <button type="submit" onClick={handleSubmit}>
+  </form>
+}
 
 ```
 
