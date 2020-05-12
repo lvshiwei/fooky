@@ -14,6 +14,8 @@ export default function useModel(initvalue = {}) {
   const [model, setModel] = useState(initvalue);
 
   const setModelWrapper = function() {
+    // setModel(key, value)
+    // set field individual
     if (typeof arguments[0] === 'string') {
       const name = arguments[0];
       const value = arguments[1];
@@ -23,6 +25,8 @@ export default function useModel(initvalue = {}) {
       return;
     }
 
+    // setModel({...obj})
+    // set entire model object
     if (typeof arguments[0] === 'object') {
       setModel({...model, ...arguments[0]});
       return;

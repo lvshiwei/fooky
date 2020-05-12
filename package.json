@@ -4,7 +4,8 @@
   "description": "React hooks library for form model binding and validation.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "b": "rollup -c -w"
   },
   "repository": {
     "type": "git",
@@ -23,13 +24,13 @@
   },
   "homepage": "https://github.com/lvshiwei/fooky#readme",
   "dependencies": {
+    "react": "^16.13.1",
     "yup": "^0.28.5"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "rollup": "^2.2.0",
     "rollup-plugin-babel": "^4.4.0"

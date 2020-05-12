@@ -5,7 +5,6 @@
 
 import React, { useState } from 'react';
 import { reach } from 'yup';
-import { isNotEmptyArray } from './lib/asserts';
 /**
  * validation hook.
  * @param {Yup Schema} schema yup schema
@@ -48,7 +47,7 @@ export default function useValidate(schema) {
           resolve();
         })
         .catch(e => {
-          if (isNotEmptyArray(e.inner)) {
+          if (Array.isArray(e.inner) && e.inner.length > 0) {
             setErrors([...e.inner]);
             reject({message: e.errors[0], details: e});
           } else {
