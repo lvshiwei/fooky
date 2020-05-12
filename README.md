@@ -16,6 +16,7 @@ const [model, setModel] = useModel({ age: 8 });
 setModel('age', 15);
 // model => {age:  15}
 
+// set an object will merge
 setModel({ gender: 'femal' });
 // model => {age: 15, gender: 'femal'}
 ```
