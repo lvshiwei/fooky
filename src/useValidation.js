@@ -92,5 +92,9 @@ export default function useValidate(schema) {
     }
   };
 
-  return [validateWrapper, errors];
+  const hasError = (name) => Array.isArray(errors) && errors.some(e => e.path === name);
+  const getErrors = (name) => Array.isArray(errors) && errors.filter(e => e.path === name);
+
+
+  return [validateWrapper, errors, hasError, getErrors];
 }

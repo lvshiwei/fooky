@@ -293,7 +293,19 @@ function useValidate(schema) {
     }
   };
 
-  return [validateWrapper, errors];
+  var hasError = function hasError(name) {
+    return Array.isArray(errors) && errors.some(function (e) {
+      return e.path === name;
+    });
+  };
+
+  var getErrors = function getErrors(name) {
+    return Array.isArray(errors) && errors.filter(function (e) {
+      return e.path === name;
+    });
+  };
+
+  return [validateWrapper, errors, hasError, getErrors];
 }
 
 var index = {
