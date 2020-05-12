@@ -6,7 +6,7 @@ fooky is React form hooks library for model binding and validation.
 $ npm i fooky
 ```
 
-### useModel
+# useModel
 useModel is for model binding.
 
 ```javascript
@@ -20,7 +20,7 @@ setModel({ gender: 'femal' });
 // model => {age: 15, gender: 'femal'}
 ```
 
-### useValidation
+# useValidation
 
 useValidation is for validation, depends on [Yup](https://github.com/jquense/yup)
 
