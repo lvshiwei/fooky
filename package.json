@@ -29,10 +29,13 @@
     "yup": "^0.28.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
+    "@testing-library/react-hooks": "^3.2.1",
+    "babel-jest": "^26.0.1",
+    "react-test-renderer": "^16.13.1",
     "rollup": "^2.2.0",
     "rollup-plugin-babel": "^4.4.0"
   }
