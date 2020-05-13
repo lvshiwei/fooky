@@ -71,6 +71,10 @@ function _objectSpread2(target) {
   return target;
 }
 
+function _readOnlyError(name) {
+  throw new Error("\"" + name + "\" is read-only");
+}
+
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
@@ -305,7 +309,17 @@ function useValidate(schema) {
     });
   };
 
-  return [validateWrapper, errors, hasError, getErrors];
+  var clearErrors = function clearErrors() {
+    return errors = (_readOnlyError("errors"), []);
+  };
+
+  return {
+    errors: errors,
+    validate: validateWrapper,
+    hasError: hasError,
+    getErrors: getErrors,
+    clearErrors: clearErrors
+  };
 }
 
 var index = {

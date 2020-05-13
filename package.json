@@ -4,7 +4,7 @@
   "description": "React hooks library for form model binding and validation.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --silent",
     "build": "rollup -c -w"
   },
   "repository": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/lvshiwei/fooky#readme",
   "dependencies": {
+    "@types/jest": "^25.2.1",
     "react": "^16.13.1",
     "user": "0.0.0",
     "yup": "^0.28.5"
