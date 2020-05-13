@@ -1,6 +1,6 @@
 # fooky
 
-fooky is React form hooks library for model binding and validation.
+fooky is React form hooks library for model binding and validation (schema depends on [Yup](https://github.com/jquense/yup)).
 
 # Install
 
@@ -12,7 +12,7 @@ $ npm i fooky
 
 ```jsx
 import React from 'react';
-import { useModel, useValidation } from '../dist/index';
+import { useModel, useValidation } from 'fooky';
 import { object, string, number} from 'yup';
 
 export default function() {
