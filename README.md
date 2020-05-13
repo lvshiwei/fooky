@@ -69,7 +69,7 @@ const schema = yup.object({
 });
 
 const model = { name: "dear tristan papason", age: 9 };
-const [validate, errors] = useValidation(schema);
+const {validate} = useValidation(schema);
 
 validate(model).catch(console.error);
 

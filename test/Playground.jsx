@@ -1,5 +1,5 @@
 import React from 'react';
-import { useModel, useValidation } from '../dist/index';
+import { useModel, useValidation } from 'fooky';
 import { object, string, number} from 'yup';
 
 export default function() {
