@@ -17,7 +17,7 @@ import { object, string, number} from 'yup';
 
 export default function() {
   const [model, setModel] = useModel({ age: 18 })
-  const [validate, , hasError, getErrors] = useValidation(object({
+  const {validate, hasError, getErrors} = useValidation(object({
     name: string().max(5, "name is too long."),
     age: number().min(18, "too young"),
   }));
