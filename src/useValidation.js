@@ -9,7 +9,7 @@ import { reach } from 'yup';
  * validation hook.
  * @param {Yup Schema} schema yup schema
  */
-export default function useValidate(schema) {
+export default function (schema) {
   const [errors, setErrors] = useState([]);
 
   /**

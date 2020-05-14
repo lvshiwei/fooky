@@ -2,11 +2,16 @@
   "name": "fooky",
   "version": "1.1.1",
   "description": "React hooks library for form model binding and validation.",
-  "main": "dist/index.js",
-  "module": "src/index.js",
+  "main": "dist/fooky.js",
+  "module": "dist/fooky.es.js",
   "scripts": {
     "test": "jest --silent",
-    "build": "rollup -c -w"
+    "build": "rm -rf dist && rollup --config",
+    "release_major": "npm version major",
+    "release_minor": "npm version minor",
+    "release_patch": "npm version patch",
+    "postversion": "npm publish",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -32,13 +37,20 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
+    "@babel/plugin-external-helpers": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
-    "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@testing-library/react-hooks": "^3.2.1",
     "babel-jest": "^26.0.1",
     "react-test-renderer": "^16.13.1",
     "rollup": "^2.2.0",
-    "rollup-plugin-babel": "^4.4.0"
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-cleanup": "^3.1.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  },
+  "resolutions": {
+    "@rollup/plugin-commonjs": "11.0.2"
   }
 }

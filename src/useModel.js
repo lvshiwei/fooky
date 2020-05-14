@@ -5,12 +5,11 @@
 
 import React, { useState } from 'react';
 
-
 /**
  * 表单数据绑定模型
  * @param {object} initvalue 初始化赋值
  */
-export default function useModel(initvalue = {}) {
+export default function (initvalue = {}) {
   const [model, setModel] = useState(initvalue);
 
   const setModelWrapper = function() {
