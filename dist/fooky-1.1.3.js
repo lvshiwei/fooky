@@ -1,5 +1,5 @@
 /*!
-* fooky v1.1.2
+* fooky v1.1.3
 * (c) 2020 lvshiwei
 */
 (function (global, factory) {
