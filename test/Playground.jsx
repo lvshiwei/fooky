@@ -15,11 +15,11 @@ export default function() {
 
   return <React.Fragment>
     <form>
-      <input placeholder="please type name" value={model.name} onChange={()=> setModel('name')} onBlur={() => validate('name')}></input>
+      <input placeholder="please type name" value={model.name} onChange={(e)=> setModel('name', e.target.value)} onBlur={(e) => validate('name', e.target.value)}></input>
       { 
         hasError('name') && <div className="error" style={highlight}>{ getErrors('name') }</div> 
       }
-      <input placeholder="how old?" value={model.age} onChange={()=> setModel('age')} onBlur={() => validate('age')}></input>
+      <input placeholder="how old?" value={model.age} onChange={(e)=> setModel('age', e.target.value)} onBlur={(e) => validate('age', e.target.value)}></input>
       { 
         hasError('age') && <div className="error" style={highlight}>{ getErrors('age') }</div>
       }

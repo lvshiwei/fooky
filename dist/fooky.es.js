@@ -1,5 +1,5 @@
 /*!
-* fooky v1.1.1
+* fooky v1.1.2
 * (c) 2020 lvshiwei
 */
 import { useState } from 'react';
