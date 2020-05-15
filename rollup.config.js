@@ -43,7 +43,7 @@ export default [
             banner,
         },
         external:[
-          'react'
+          'react', 'yup'
         ]
     },
     {
@@ -58,7 +58,7 @@ export default [
             banner,
         },
         external:[
-          'react'
+          'react', 'yup'
         ]
     },
     {
@@ -79,7 +79,7 @@ export default [
             }
         ],
         external:[
-          'react'
+          'react', 'yup'
         ]
     },
 ];

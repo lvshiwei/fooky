@@ -30,9 +30,7 @@
   },
   "homepage": "https://github.com/lvshiwei/fooky#readme",
   "dependencies": {
-    "@types/jest": "^25.2.1",
     "react": "^16.13.1",
-    "user": "0.0.0",
     "yup": "^0.28.5"
   },
   "devDependencies": {
