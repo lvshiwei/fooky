@@ -1,6 +1,6 @@
 {
   "name": "fooky",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "React hooks library for form model binding and validation.",
   "main": "dist/fooky.js",
   "module": "dist/fooky.es.js",
