@@ -12,10 +12,11 @@ $ npm i fooky
 
 ```jsx
 import React from 'react';
-import { useModel, useValidation } from 'fooky';
+import fooky from 'fooky';
 import { object, string, number} from 'yup';
 
 export default function() {
+  const {useModel, useValidation} = fooky;
   const [model, setModel] = useModel({ age: 18 })
   const {validate, hasError, getErrors} = useValidation(object({
     name: string().max(5, "name is too long."),
