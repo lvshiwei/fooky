@@ -1,21 +1,14 @@
 /*!
-* fooky v1.2.3
+* fooky v1.2.4
 * (c) 2020 lvshiwei
 */
 'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var react = require('react');
 var react__default = _interopDefault(react);
 var yup = require('yup');
-
-function _readOnlyError(name) {
-  throw new Error("\"" + name + "\" is read-only");
-}
-var readOnlyError = _readOnlyError;
 
 function createCommonjsModule(fn, module) {
 	return module = { exports: {} }, fn(module, module.exports), module.exports;
@@ -39,7 +32,7 @@ var _extends_1 = createCommonjsModule(function (module) {
   module.exports = _extends;
 });
 
-function useModel(initvalue) {
+function useModel (initvalue) {
   if (initvalue === void 0) {
     initvalue = {};
   }
@@ -48,10 +41,10 @@ function useModel(initvalue) {
       setModel = _useState[1];
   var setModelWrapper = function setModelWrapper() {
     if (typeof arguments[0] === 'string') {
-      var _name = arguments[0];
+      var name = arguments[0];
       var value = arguments[1];
       var tm = _extends_1({}, model);
-      tm[_name] = value;
+      tm[name] = value;
       setModel(tm);
       return;
     }
@@ -62,10 +55,16 @@ function useModel(initvalue) {
   };
   return [model, setModelWrapper];
 }
-function useValidation(schema) {
-  var _useState2 = react.useState([]),
-      errors = _useState2[0],
-      setErrors = _useState2[1];
+
+function _readOnlyError(name) {
+  throw new Error("\"" + name + "\" is read-only");
+}
+var readOnlyError = _readOnlyError;
+
+function useValidation (schema) {
+  var _useState = react.useState([]),
+      errors = _useState[0],
+      setErrors = _useState[1];
   var addErrorItem = function addErrorItem(path, e) {
     if (!errors.some(function (item) {
       return item.path === path;
@@ -161,5 +160,9 @@ function useValidation(schema) {
   };
 }
 
-exports.useModel = useModel;
-exports.useValidation = useValidation;
+var index = {
+  useModel: useModel,
+  useValidation: useValidation
+};
+
+module.exports = index;
